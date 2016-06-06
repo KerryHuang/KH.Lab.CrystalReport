@@ -47,6 +47,8 @@ namespace CrystalReport.MVC.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
+            //ReportViewerViewModel model = new ReportViewerViewModel();
+            //model.ReportPath = Url.Content("~/Products/WebForm.aspx");
             return View();
         }
 

@@ -48,6 +48,7 @@
       <HintPath>..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -131,6 +132,7 @@
       <DependentUpon>ProductDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\ReportViewerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Products\ProductReport.cs">
       <AutoGen>True</AutoGen>
@@ -138,6 +140,13 @@
       <DependentUpon>ProductReport.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +181,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Products\Create.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -188,6 +200,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Shared\Site.Master" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

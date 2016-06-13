@@ -33,6 +33,13 @@ namespace CrystalReport.WebFrom.Report
 
             // 建置報表
             CrystalReportViewer1.DataBind();
+
+            // 文字物件
+            TextObject txt1 = (TextObject)reportdoc.ReportDefinition.ReportObjects["MyName"];
+            // 設定文字內容
+            txt1.Text = "Kerry";
+            // 設定文字顏色
+            txt1.Color = System.Drawing.Color.Blue;
         }
     }
 }
